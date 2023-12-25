@@ -1,0 +1,254 @@
+/* Reset CSS */
+body, h1, h2, p, label, input, button {
+    margin: 0;
+    padding: 0;
+    
+    box-sizing: content-box;
+  }
+  
+  /* Style global pour le corps de la page */
+  body {
+    font-family: 'Times New Roman', Times, serif;
+  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400%;
+    
+    background-size: 85rem 90rem;
+    filter: blur();
+    background-image: linear-gradient(79deg, #395886, #638ecb 48%,  #b1c9ef );
+  }
+  
+  /* Conteneur principal de la page */
+  .pageRegister {
+    max-width: 550px;
+    
+    margin: 50px auto;
+    padding: 20px;
+    margin-right: 50px;
+  }
+  
+  /* Styles pour le titre principal */
+  .text-container {
+    position: absolute;
+    left: 20px;
+    top: 20rem;
+      color: #121412;
+      font-size: 30px;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  .text-container {
+    animation: bounce 2s infinite;
+  }
+  
+  .flex {
+    background-color: rgba(0, 0, 0, 0.3); /* Remplacez les valeurs par la couleur et l'opacité souhaitées */
+    padding: 30px;
+  
+    color: rgb(0, 0, 0); /*JOIN US*/
+    outline: 10;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 10px;
+   
+    
+  }
+  
+     
+  
+  
+  /* Styles pour le formulaire */
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 40px;
+    border-radius: 5px;
+    /*box-shadow: 20px 20px 10px rgba(22, 21, 21, 0.1); */
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 22px 70px 4px;
+  
+  }
+  
+  /* Styles pour chaque champ du formulaire */
+  .flex {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #777; /* Couleur du texte du placeholder */
+    transition: top 0.5s ease-in-out, font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  input {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 0.2px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  input:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  }
+  
+  
+  
+  /* Styles pour les messages d'erreur */
+  .error {
+    color: #bd2222;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Styles pour le bouton */
+  #sub_btn {
+    background-color: #B1C9EF;
+    color: black;
+    text-align: center;
+    padding: 10px 80px;
+    border: none;
+    box-sizing: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+    display: inline-block;
+    
+  }
+  
+  #sub_btn:hover {
+    background-color: #638ecb;
+  }
+  
+  
+  /* pour sign in now */
+  h4 {
+    display: inline-block; 
+    margin-left: 10px; 
+  }
+  
+  h4 a {
+    color: hsl(234, 84%, 44%); 
+    text-decoration: none;
+  }
+  
+  h4 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles pour le lien vers la page d'accueil */
+  h2 a {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: #0b0d0f;
+    text-decoration: none;
+  }
+  
+  h2 a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Styles pour le conteneur principal avec l'arrière-plan */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 150%;
+  }
+  
+  /* Styles pour l'arrière-plan */
+  .pageRegister {
+    background-color: transparent;
+  }
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-left: -150px; /* Ajustez la marge selon vos besoins */
+  }
+  
+  .checkbox-container input {
+    margin-right: 5px; /* Ajustez la marge entre la case à cocher et le texte selon vos besoins */
+    transform: scale(2);
+  }
+  
+  
+  
+  /* Styles pour les messages d'erreur */
+  .error {
+    color: #bd2222;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  
+  /* Styles pour chaque champ du formulaire avec erreur */
+  input.error {
+    border-color: #bd2222; /* Couleur de bordure rouge pour indiquer l'erreur */
+  }
+  
+  
+  
+  /* Styles pour chaque champ du formulaire avec erreur */
+  input.error {
+    border-color: #bd2222; /* Couleur de bordure rouge pour indiquer l'erreur */
+  }
+  
+  /* Styles pour les nouveaux champs */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .flex p {
+    margin-bottom: 10px;
+  }
+  
+  select,
+  input[type="gender"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 0.1px;
+    border: 0.5px solid #0c0b0b70;
+    border-radius: 4px;
+  }
+  
+  /* ... Votre CSS existant ... */
+  .show-password-button {
+    position: relative;
+    margin-left: -30px; /* Ajustez la marge selon votre préférence */
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .show-password-button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  
+  
+  

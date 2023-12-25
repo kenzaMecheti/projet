@@ -1,0 +1,231 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 1.6rem;
+  overflow-y: hidden;
+  overflow-x: hidden; /* to prevent scrolling on x-axis in mobile when mobile nav is hidden */
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(204, 204, 204);
+  font-size: 17px;
+}
+
+.page-accueil {
+  background-image: url("./images/fond2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.brand {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: 769px) and (max-width: 980px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+.logo {
+  width: 80px; /* Ajustez la largeur du logo selon vos besoins */
+  height: auto; /* Ajustez la hauteur automatiquement en fonction de la largeur */
+  margin-right: 0%; /* Ajustez la marge entre le logo et le texte "Unicom" */
+
+  @media (min-width: 769px) and (max-width: 980px) {
+    width: 60px;
+  }
+
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 15px;
+  height: 8vh;
+
+  .brand {
+    text-transform: uppercase;
+  }
+}
+
+.nav__item {
+  transition: all 250ms ease-in;
+
+  &:hover {
+    transform: scale(1.2); /* Agrandit les boutons au survol */
+  }
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+
+  a {
+    text-wrap: nowrap;
+
+    @media (min-width: 769px) and (max-width: 980px) {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 980px) {
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 835px) {
+    position: fixed;
+    z-index: 100;
+    top: 10vh;
+    right: 0;
+
+    height: 93vh;
+    width: 50vw;
+
+    max-width: 290px;
+    min-width: 200px;
+
+    background: rgb(0, 33, 65);
+
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+
+    .link {
+      background: transparent;
+      color: rgb(204, 204, 204);
+      border: none;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}
+
+.nav__toggler {
+  display: none;
+
+  @media screen and (max-width: 835px) {
+    display: block;
+    cursor: pointer;
+  }
+
+  div {
+    width: 2.5rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: rgb(255, 255, 255);
+    transition: 0.3s ease-in;
+  }
+}
+
+/* Active Class */
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+
+.toggle {
+  .line1 {
+    transform: rotate(-45deg) translate(-4px, 5px);
+  }
+  .line2 {
+    opacity: 0;
+  }
+  .line3 {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}
+
+.container-first {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 30%;
+
+  h1,
+  h2 {
+    text-transform: uppercase;
+    color: #f1f1f1;
+    font-family: Abril fatface, sans-serif;
+  }
+
+  > h1 {
+    font-size: 50px;
+  }
+
+  > h2 {
+    font-size: 30px;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+}
+
+.link {
+  background-color: #134882;
+  border: 1px solid #ffffff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  > img {
+    width: 30px;
+
+    cursor: pointer;
+  }
+}
+
+/* .icon-container {
+  display: inline-block;
+  margin: 0 10px; 
+  position: center;
+}
+
+.icon {
+  width: 30px; 
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+} */
